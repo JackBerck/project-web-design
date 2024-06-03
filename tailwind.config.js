@@ -30,7 +30,10 @@ module.exports = {
         signUp: "url('../img/login-sign-up/sign-up.png')",
         signIn: "url('../img/login-sign-up/sign-in.png')",
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
