@@ -12,8 +12,14 @@ window.onscroll = function () {
   const fixedNav = header.offsetTop;
 
   if (window.scrollY > fixedNav) {
+    if (header.classList.contains("absolute")) {
+      header.classList.remove("absolute");
+    }
     header.classList.add("navbar-fixed");
   } else {
+    if (!header.classList.contains("absolute")) {
+      header.classList.add("absolute");
+    }
     header.classList.remove("navbar-fixed");
   }
 };
